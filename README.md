@@ -14,6 +14,6 @@ Dev environment inside container pre-installed with:
 * [`poetry`](https://python-poetry.org/) for managing project dependencies
 * Predefined VS Code extensions
 
-List of default VS Code extensions is availabel in `.devcontainer/devcontainer.json` 
+List of default VS Code extensions is available in `.devcontainer/devcontainer.json` 
 
 
