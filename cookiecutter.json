@@ -1,5 +1,10 @@
 {
-    "python_version": ["3.8", "3.9", "3.10"],
+    "python_version": [
+        "3.8",
+        "3.9",
+        "3.10",
+        "3.11"
+    ],
     "project_name": "New Python Project",
     "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
     "version": "0.1.0"
