@@ -1,5 +1,6 @@
 from pathlib import Path
 import toml
+import pytest
 from typing import Optional
 from pytest_cookies.plugin import Cookies
 
@@ -41,3 +42,13 @@ def test_bake_with_specified_project_name(cookies: Cookies):
     assert project_name == "project_blue_book"
     project_package = result.project / "project_blue_book"
     assert project_package.isdir()
+
+
+def test_sample_tests(cookies: Cookies):
+    """
+    Testing if sample unittest are finishing without errors.
+    """
+    result = cookies.bake(extra_context={"project_name": "sample_project"})
+    tests_dir = result.project / "tests"
+    exit_code = pytest.main(["-x", str(tests_dir)])
+    assert exit_code == 0
