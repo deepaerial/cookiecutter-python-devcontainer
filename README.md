@@ -1,12 +1,12 @@
-# Cookiecutter Python Dev Container
+# Cookiecutter Dev Container
 
-Modern Python dev environment inside Docker container.
+Modern Python development environment inside Docker container.  
 ## Quickstart
-Install `cookiecutter` tool if you don't have one already installed and run following command.
+Install `cookiecutter` tool if you don't have one already installed and run the following command.
 ```shell
-cookiecutter https://github.com/audreyfeldroy/cookiecutter-python-devcontainer.git
+$ cookiecutter gh:deepaerial/cookiecutter-python-devcontainer
 ```
-Cookiecutter installation instructions of official [wiki](https://cookiecutter.readthedocs.io/en/stable/installation.html).
+Cookiecutter installation instructions from the official [wiki](https://cookiecutter.readthedocs.io/en/stable/installation.html).
 
 ## Features
 Dev environment inside container pre-installed with:
