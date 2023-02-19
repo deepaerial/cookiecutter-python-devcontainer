@@ -1,18 +1,7 @@
-from pathlib import Path
-import toml
 import pytest
-from typing import Optional
 from pytest_cookies.plugin import Cookies
 
-
-def get_from_pyproject_toml(pyproject_toml: Path, attr: str) -> Optional[str]:
-    text_data = pyproject_toml.read_text("utf-8")
-    data = toml.loads(text_data)
-    for key in attr.split("."):
-        data = data.get(key)
-        if data is None:
-            break
-    return data
+from .utils import get_from_pyproject_toml
 
 
 def test_bake_with_specified_python_version(cookies: Cookies):
