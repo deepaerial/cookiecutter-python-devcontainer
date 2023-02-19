@@ -10,21 +10,22 @@
 		}
 	},
 
-	// Set *default* container specific settings.json values on container create.
-	"settings": { 
-		"python.defaultInterpreterPath": "/usr/local/bin/python",
-		"python.linting.enabled": false,
-		"python.formatting.provider": "black",
-		"python.linting.flake8Enabled": true
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"python.defaultInterpreterPath": "/workspaces/{{ cookiecutter.project_slug }}/.venv",
+				"python.linting.enabled": false,
+				"python.formatting.provider": "black",
+				"python.linting.flake8Enabled": true
+			},
+			"extensions": [
+				"ms-python.python",
+				"ms-azuretools.vscode-docker",
+				"eamodio.gitlens",
+				"ryanluker.vscode-coverage-gutters"
+			]
+		}
 	},
-
-	// Add the IDs of extensions you want installed when the container is created.
-	"extensions": [
-		"ms-python.python",
-		"ms-azuretools.vscode-docker",
-		"eamodio.gitlens",
-		"ryanluker.vscode-coverage-gutters"
-	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
