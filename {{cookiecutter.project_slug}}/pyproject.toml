@@ -7,10 +7,11 @@ authors = ["author <author@example.com>"]
 [tool.poetry.dependencies]
 python = "^{{cookiecutter.python_version}}"
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.0.4"
+black = "^23.1.0"
 flake8 = "^3.7.9"
 pdbpp = "^0.10.2"
-black = "^19.10b0"
 isort = "^4.3.21"
 pytest = "^5.3.5"
 mypy = "^0.961"
