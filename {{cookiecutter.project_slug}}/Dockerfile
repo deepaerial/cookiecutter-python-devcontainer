@@ -1,8 +1,7 @@
 FROM python:{{cookiecutter.python_version}} as base
 
 RUN pip install poetry
-RUN poetry virtualenvs.options.always-copy true && \
-    poetry virtualenvs.in-project true
+RUN poetry virtualenvs.options.always-copy true
 
 FROM base as python-base
 COPY ./poetry.lock ./pyproject.toml /app/

@@ -13,7 +13,7 @@ def docker_client() -> DockerClient:
 
 
 @pytest.fixture(scope="session", params=["3.8", "3.9", "3.10", "3.11"])
-def baked_example_project(cookies: Cookies, request) -> Generator[Result, None, None]:
+def baked_example_project(cookies: Cookies) -> Generator[Result, None, None]:
     yield cookies.bake(
         extra_context={
             "project_name": "example_project",
