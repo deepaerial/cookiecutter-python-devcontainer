@@ -20,6 +20,11 @@ Dev environment inside container pre-installed with:
 * [isort](https://pypi.org/project/isort/)
 * [flake8](https://flake8.pycqa.org/en/latest/)
 * [pre-commit](https://pre-commit.com/)
+* [ruff](https://github.com/astral-sh/ruff)
 
+## Running cookiecutter tests locally
+```shell
+$ poetry run pytest .
+```
 
 

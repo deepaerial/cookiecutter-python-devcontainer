@@ -1,3 +1,18 @@
+[tool.pytest.ini_options]
+norecursedirs = [
+    ".venv",
+    ".vscode",
+    "__pycache__",
+    "{{cookiecutter.project_slug}}"
+]
+python_files = [
+    "test_*.py"
+]
+python_functions = [
+    "test_*"
+]
+
+
 [tool.poetry]
 name = "cookiecutter-python-devcontainer"
 version = "0.1.0"
@@ -6,7 +21,7 @@ authors = ["Your Name <you@example.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = "3.9"
+python = "3.9.*"
 cookiecutter = "^2.1.1"
 
 [tool.poetry.dev-dependencies]
