@@ -11,13 +11,12 @@ python = "^{{cookiecutter.python_version}}"
 pre-commit = "^3.0.4"
 black = "^23.1.0"
 flake8 = "^3.7.9"
-pdbpp = "^0.10.2"
 isort = "^4.3.21"
 pytest = "^5.3.5"
 mypy = "^0.961"
 pytest-cov = "^2.11.1"
 coverage = {extras = ["toml"], version = "^5.5"}
-ruff = "^0.1.6"
+ruff = "0.6.5"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
@@ -73,12 +72,14 @@ exclude = [
     "build",
     "dist"
 ]
-
-fixable = ["I001", "F401", "W291", "W292"]
 # Same as Black.
 line-length = 120
+
+[tool.ruff.lint]
+fixable = ["I001", "F401", "W291", "W292"]
+
 # Allow unused variables when underscore-prefixed.
 dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
 
-[tool.ruff.per-file-ignores]
+[tool.ruff.lint.per-file-ignores]
 "poetry.lock" = ["E501"]
